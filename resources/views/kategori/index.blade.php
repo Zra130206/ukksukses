@@ -16,7 +16,7 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>NO</th>
                     <th>Deskripsi</th>
                     <th>Kategori</th>
                     <th>Keterangan Kategori</th>
@@ -24,9 +24,9 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($rsetKategori as $kategori)
+                @foreach($rsetKategori as $i => $kategori)
                     <tr>
-                        <td>{{ $kategori->id }}</td>
+                        <td>{{ ++$i }}</td>
                         <td>{{ $kategori->deskripsi }}</td>
                         <td>{{ $kategori->kategori }}</td>
                         <td>{{ $kategori->ketkategori }}</td>
